@@ -996,18 +996,18 @@ Perfect: 0
 alex@/tmp/binary_trees$
 ```
     
-17. Sibling
+### 17. Sibling
 
-#### Files: []() | []() 
-mandatory
-Score: 100.0% (Checks completed: 100.0%)
-Write a function that finds the sibling of a node
+#### Files: [17-binary_tree_sibling.c](17-binary_tree_sibling.c) | [17-main.c](17-main.c) 
 
-Prototype: binary_tree_t *binary_tree_sibling(binary_tree_t *node);
-Where node is a pointer to the node to find the sibling
-Your function must return a pointer to the sibling node
-If node is NULL or the parent is NULL, return NULL
-If node has no sibling, return NULL
+<b>Write a function that finds the sibling of a node</b>
+
+* Prototype: `binary_tree_t *binary_tree_sibling(binary_tree_t *node);`
+* Where `node` is a pointer to the node to find the sibling
+* Your function must return a pointer to the sibling node
+* If `node` is `NULL` or the parent is `NULL`, return `NULL`
+* If `node` has no sibling, return `NULL`
+
 ```
 alex@/tmp/binary_trees$ cat 17-main.c
 #include <stdlib.h>
