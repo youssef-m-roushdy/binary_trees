@@ -562,6 +562,7 @@ alex@/tmp/binary_trees$
 * Prototype: `size_t binary_tree_height(const binary_tree_t *tree);`
 * Where `tree` is a pointer to the root node of the tree to measure the height.
 * If `tree` is `NULL`, your function must return `0`
+
 ```
 alex@/tmp/binary_trees$ cat 9-main.c 
 #include <stdlib.h>
@@ -603,16 +604,17 @@ Height from 128: 1
 Height from 54: 0
 alex@/tmp/binary_trees$
 ```
-    
+
 ### 10. Depth
 
 #### Files: [10-binary_tree_depth.c](10-binary_tree_depth.c) | [10-main.c](10-main.c) 
 
-Write a function that measures the depth of a node in a binary tree
+<b>Write a function that measures the depth of a node in a binary tree</b>
 
-Prototype: size_t binary_tree_depth(const binary_tree_t *tree);
-Where tree is a pointer to the node to measure the depth
-If tree is NULL, your function must return 0
+* Prototype: `size_t binary_tree_depth(const binary_tree_t *tree)`;
+* Where `tree` is a pointer to the node to measure the depth
+* If `tree` is `NULL`, your function must return `0`
+
 ```
 alex@/tmp/binary_trees$ cat 10-main.c 
 #include <stdlib.h>
@@ -655,16 +657,16 @@ Depth of 54: 2
 alex@/tmp/binary_trees$
 ```
     
-11. Size
+### 11. Size
 
-#### Files: []() | []() 
-mandatory
-Score: 100.0% (Checks completed: 100.0%)
-Write a function that measures the size of a binary tree
+#### Files: [11-binary_tree_size.c](11-binary_tree_size.c) | [11-main.c](11-main.c) 
 
-Prototype: size_t binary_tree_size(const binary_tree_t *tree);
-Where tree is a pointer to the root node of the tree to measure the size
-If tree is NULL, the function must return 0
+<b>Write a function that measures the size of a binary tree</b>
+
+* Prototype: `size_t binary_tree_size(const binary_tree_t *tree);`
+* Where `tree` is a pointer to the root node of the tree to measure the size
+* If `tree` is `NULL`, the function must return 0
+
 ```
 alex@/tmp/binary_trees$ cat 11-main.c 
 #include <stdlib.h>
@@ -707,17 +709,17 @@ Size of 54: 1
 alex@/tmp/binary_trees$
 ```
     
-12. Leaves
+### 12. Leaves
 
-#### Files: []() | []() 
-mandatory
-Score: 100.0% (Checks completed: 100.0%)
-Write a function that counts the leaves in a binary tree
+#### Files: [12-binary_tree_leaves.c](12-binary_tree_leaves.c) | [12-main.c](12-main.c) 
 
-Prototype: size_t binary_tree_leaves(const binary_tree_t *tree);
-Where tree is a pointer to the root node of the tree to count the number of leaves
-If tree is NULL, the function must return 0
-A NULL pointer is not a leaf
+<b>Write a function that counts the leaves in a binary tree</b>
+
+* Prototype: `size_t binary_tree_leaves(const binary_tree_t *tree);`
+* Where `tree` is a pointer to the root node of the tree to count the number of leaves
+* If `tree` is `NULL`, the function must return 0
+* A `NULL` pointer is not a leaf
+
 ```
 alex@/tmp/binary_trees$ cat 12-main.c 
 #include <stdlib.h>
@@ -760,17 +762,17 @@ Leaves in 54: 1
 alex@/tmp/binary_trees$
 ```
     
-13. Nodes
+### 13. Nodes
 
-#### Files: []() | []() 
-mandatory
-Score: 100.0% (Checks completed: 100.0%)
-Write a function that counts the nodes with at least 1 child in a binary tree
+#### Files: [13-binary_tree_nodes.c](13-binary_tree_nodes.c) | [13-main.c](13-main.c) 
 
-Prototype: size_t binary_tree_nodes(const binary_tree_t *tree);
-Where tree is a pointer to the root node of the tree to count the number of nodes
-If tree is NULL, the function must return 0
-A NULL pointer is not a node
+<b>Write a function that counts the nodes with at least 1 child in a binary tree</b>
+
+* Prototype: `size_t binary_tree_nodes(const binary_tree_t *tree);`
+* Where `tree` is a pointer to the root node of the tree to count the number of nodes
+* If `tree` is `NULL`, the function must return 0
+* A `NULL` pointer is not a node
+
 ```
 alex@/tmp/binary_trees$ cat 13-main.c
 #include <stdlib.h>
@@ -813,16 +815,15 @@ Nodes in 54: 0
 alex@/tmp/binary_trees$
 ```
     
-14. Balance factor
+### 14. Balance factor
 
-#### Files: []() | []() 
-mandatory
-Score: 100.0% (Checks completed: 100.0%)
-Write a function that measures the balance factor of a binary tree
+#### Files: [14-binary_tree_balance.c](14-binary_tree_balance.c) | [14-main.c](14-main.c) 
 
-Prototype: int binary_tree_balance(const binary_tree_t *tree);
-Where tree is a pointer to the root node of the tree to measure the balance factor
-If tree is NULL, return 0
+<b>Write a function that measures the balance factor of a binary tree</b>
+
+* Prototype: `int binary_tree_balance(const binary_tree_t *tree);`
+* Where `tree` is a pointer to the root node of the tree to measure the balance factor
+* If `tree` is `NULL`, return `0`
 ```
 alex@/tmp/binary_trees$ cat 14-main.c 
 #include <stdlib.h>
@@ -871,16 +872,15 @@ Balance of 54: +0
 alex@/tmp/binary_trees$
 ```
     
-15. Is full
+### 15. Is full
 
-#### Files: []() | []() 
-mandatory
-Score: 100.0% (Checks completed: 100.0%)
-Write a function that checks if a binary tree is full
+#### Files: [15-binary_tree_is_full.c](15-binary_tree_is_full.c) | [15-main.c](15-main.c) 
 
-Prototype: int binary_tree_is_full(const binary_tree_t *tree);
-Where tree is a pointer to the root node of the tree to check
-If tree is NULL, your function must return 0
+<b>Write a function that checks if a binary tree is full</b>
+
+* Prototype: `int binary_tree_is_full(const binary_tree_t *tree);`
+* Where `tree` is a pointer to the root node of the tree to check
+* If `tree` is `NULL`, your function must return `0`
 ```
 alex@/tmp/binary_trees$ cat 15-main.c
 #include <stdlib.h>
@@ -926,7 +926,7 @@ alex@/tmp/binary_trees$
     
 16. Is perfect
 
-#### Files: []() | []() 
+#### Files: [16-binary_tree_is_perfect.c](16-binary_tree_is_perfect.c) | [16-main.c](16-main.c) 
 mandatory
 Score: 100.0% (Checks completed: 100.0%)
 Write a function that checks if a binary tree is perfect
