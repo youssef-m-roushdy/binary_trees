@@ -556,7 +556,6 @@ alex@/tmp/binary_trees$
 ### 9. Height
 
 #### Files: [9-binary_tree_height.c](9-binary_tree_height.c) | [9-main.c](9-main.c) 
-mandatory
 
 <b>Write a function that measures the height of a binary tree</b>
 
