@@ -1058,18 +1058,18 @@ Sibling of 98: (nil)
 alex@/tmp/binary_trees$
 ```
     
-18. Uncle
+### 18. Uncle
 
-#### Files: []() | []() 
-mandatory
-Score: 100.0% (Checks completed: 100.0%)
-Write a function that finds the uncle of a node
+#### Files: [18-binary_tree_uncle.c](18-binary_tree_uncle.c) | [18-main.c](18-main.c) 
 
-Prototype: binary_tree_t *binary_tree_uncle(binary_tree_t *node);
-Where node is a pointer to the node to find the uncle
-Your function must return a pointer to the uncle node
-If node is NULL, return NULL
-If node has no uncle, return NULL
+<b>Write a function that finds the uncle of a node</b>
+
+* Prototype: `binary_tree_t *binary_tree_uncle(binary_tree_t *node);`
+* Where `node` is a pointer to the node to find the uncle
+* Your function must return a pointer to the uncle node
+* If `node` is `NULL`, return `NULL`
+* If `node` has no uncle, return `NULL`
+
 ```
 alex@/tmp/binary_trees$ cat 18-main.c
 #include <stdlib.h>
@@ -1116,3 +1116,4 @@ Uncle of 54: 128
 Uncle of 12: (nil)
 alex@/tmp/binary_trees$
 ```
+
