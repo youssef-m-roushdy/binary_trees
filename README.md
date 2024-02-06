@@ -824,6 +824,7 @@ alex@/tmp/binary_trees$
 * Prototype: `int binary_tree_balance(const binary_tree_t *tree);`
 * Where `tree` is a pointer to the root node of the tree to measure the balance factor
 * If `tree` is `NULL`, return `0`
+
 ```
 alex@/tmp/binary_trees$ cat 14-main.c 
 #include <stdlib.h>
@@ -881,6 +882,7 @@ alex@/tmp/binary_trees$
 * Prototype: `int binary_tree_is_full(const binary_tree_t *tree);`
 * Where `tree` is a pointer to the root node of the tree to check
 * If `tree` is `NULL`, your function must return `0`
+
 ```
 alex@/tmp/binary_trees$ cat 15-main.c
 #include <stdlib.h>
@@ -933,6 +935,7 @@ alex@/tmp/binary_trees$
 * Prototype: `int binary_tree_is_perfect(const binary_tree_t *tree);`
 * Where `tree` is a pointer to the root node of the tree to check
 * If `tree` is `NULL`, your function must return `0`
+
 ```
 alex@/tmp/binary_trees$ cat 16-main.c
 #include <stdlib.h>
