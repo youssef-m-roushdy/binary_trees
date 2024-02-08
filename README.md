@@ -2335,19 +2335,21 @@ File: 130-binary_tree_is_heap.c
 
 ### 37. Heap - Insert
 
-#### Files: []() | []()
+#### Files: [131-heap_insert.c](131-heap_insert.c) | [0-binary_tree_node.c](0-binary_tree_node.c) | [131-main.c](131-main.c)
 
-Write a function that inserts a value in Max Binary Heap
+<b>Write a function that inserts a value in Max Binary Heap</b>
 
-Prototype: heap_t *heap_insert(heap_t **root, int value)
-Where root is a double pointer to the root node of the Heap to insert the value
-And value is the value to store in the node to be inserted
-Your function must return a pointer to the created node, or NULL on failure
-If the address stored in root is NULL, the created node must become the root node.
-You have to respect a Max Heap ordering
-You are allowed to have up to 6 functions in your file
-Your file 0-binary_tree_node.c will be compiled during the correction
+* Prototype: `heap_t *heap_insert(heap_t **root, int value)`
+* Where `root` is a double pointer to the root node of the Heap to insert the value
+* And `value` is the value to store in the node to be inserted
+* Your function must return a pointer to the created node, or `NULL` on failure
+* If the address stored in `root` is `NULL`, the created node must become the root node.
+* You have to respect a `Max Heap` ordering
+* You are allowed to have up to `6` functions in your file
 
+Your file `0-binary_tree_node.c` will be compiled during the correction
+
+```
 alex@/tmp/binary_trees$ cat 131-main.c
 #include <stdlib.h>
 #include <stdio.h>
@@ -2429,20 +2431,22 @@ Inserted: 50
   .--(050)     (098)     (012)     (256)
 (046)
 alex@/tmp/binary_trees$
-
-    
+```
+ 
 ### 38. Heap - Array to Binary Heap
 
-#### Files: []() | []()
+#### Files: [132-array_to_heap.c](132-array_to_heap.c) | [131-heap_insert.c](131-heap_insert.c) | [0-binary_tree_node.c](0-binary_tree_node.c) | [132-main.c](132-main.c)
 
-Write a function that builds a Max Binary Heap tree from an array
+<b>Write a function that builds a Max Binary Heap tree from an array</b>
 
-Prototype: heap_t *array_to_heap(int *array, size_t size);
-Where array is a pointer to the first element of the array to be converted
-And size is the number of element in the array
-Your function must return a pointer to the root node of the created Binary Heap, or NULL on failure
-Your files 131-heap_insert.c and 0-binary_tree_node.c will be compiled during the correction
+* Prototype: `heap_t *array_to_heap(int *array, size_t size);`
+* Where array is a pointer to the first element of the array to be converted
+* And size is the number of element in the array
+* Your function must return a pointer to the root node of the created Binary Heap, or NULL on failure
 
+Your files `131-heap_insert.c` and `0-binary_tree_node.c` will be compiled during the correction
+
+```
 alex@/tmp/binary_trees$ cat 132-main.c
 #include <stdlib.h>
 #include "binary_trees.h"
@@ -2475,13 +2479,13 @@ alex@/tmp/binary_trees$ ./132-heap_array
   .--(047)     (034)     (002)     (020)     (022)     (068)     (001)     (021)
 (032)
 alex@/tmp/binary_trees$
-
+```
     
 ### 39. Heap - Extract
 
-#### Files: []() | []()
+#### Files: [133-heap_extract.c](133-heap_extract.c) | [133-main.c](133-main.c)
 
-Write a function that extracts the root node of a Max Binary Heap
+<b>Write a function that extracts the root node of a Max Binary Heap</b>
 
 Prototype: int heap_extract(heap_t **root);
 Where root is a double pointer to the root node of heap
