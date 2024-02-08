@@ -1268,7 +1268,7 @@ alex@/tmp/binary_trees$
 ```
  
 ### 21. Is complete
-#### Files: []() | []()
+#### Files: [102-binary_tree_is_complete.c](102-binary_tree_is_complete.c) | [102-main.c](102-main.c)
 
 <b>Write a function that checks if a binary tree is complete</b>
 
@@ -1348,13 +1348,15 @@ alex@/tmp/binary_trees$
 ```
 
 ### 22. Rotate left
-#### Files: []() | []()
+#### Files: [103-binary_tree_rotate_left.c](103-binary_tree_rotate_left.c) | [103-main.c](103-main.c)
 
 <b>Write a function that performs a left-rotation on a binary tree</b>
 
-Prototype: binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
-Where tree is a pointer to the root node of the tree to rotate
-Your function must return a pointer to the new root node of the tree once rotated
+* Prototype: `binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);`
+* Where `tree` is a pointer to the root node of the tree to rotate
+* Your function must return a pointer to the new root node of the tree once rotated
+
+```
 alex@/tmp/binary_trees$ cat 103-main.c
 #include <stdlib.h>
 #include <stdio.h>
@@ -1403,20 +1405,18 @@ Rotate-left 128
   .--(128)--.       (450)
 (098)     (420)
 alex@/tmp/binary_trees$
-Repo:
-
-GitHub repository: binary_trees
-File: 103-binary_tree_rotate_left.c
+```
     
-23. Rotate right
-#### Files: []() | []()
-#advanced
-Score: 100.0% (Checks completed: 100.0%)
+### 23. Rotate right
+#### Files: [104-binary_tree_rotate_right.c](104-binary_tree_rotate_right.c) | [104-main.c](104-main.c)
+
 Write a function that performs a right-rotation on a binary tree
 
-Prototype: binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
-Where tree is a pointer to the root node of the tree to rotate
-Your function must return a pointer to the new root node of the tree once rotated
+* Prototype: *`binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);`*
+* Where *`tree`* is a pointer to the root node of the tree to rotate
+* Your function must return a pointer to the new root node of the tree once rotated
+
+```
 alex@/tmp/binary_trees$ cat 104-main.c
 #include <stdlib.h>
 #include <stdio.h>
@@ -1465,16 +1465,12 @@ Rotate-right 64
 (020)       .--(064)--.
           (056)     (098)
 alex@/tmp/binary_trees$
-Repo:
-
-GitHub repository: binary_trees
-File: 104-binary_tree_rotate_right.c
+```
     
-24. Is BST
-#### Files: []() | []()
-#advanced
-Score: 100.0% (Checks completed: 100.0%)
-Write a function that checks if a binary tree is a valid Binary Search Tree
+### 24. Is BST
+#### Files: [110-binary_tree_is_bst.c](110-binary_tree_is_bst.c) | [110-main.c](110-main.c)
+
+<b>Write a function that checks if a binary tree is a valid Binary Search Tree</b>
 
 Prototype: int binary_tree_is_bst(const binary_tree_t *tree);
 Where tree is a pointer to the root node of the tree to check
