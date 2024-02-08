@@ -1191,6 +1191,7 @@ alex@/tmp/binary_trees$
 ```
 
 ### 20. Level-order traversal
+
 #### Files: [101-binary_tree_levelorder.c](101-binary_tree_levelorder.c) | [101-main.c](101-main.c)
 
 <b>Write a function that goes through a binary tree using level-order traversal</b>
@@ -1268,6 +1269,7 @@ alex@/tmp/binary_trees$
 ```
  
 ### 21. Is complete
+
 #### Files: [102-binary_tree_is_complete.c](102-binary_tree_is_complete.c) | [102-main.c](102-main.c)
 
 <b>Write a function that checks if a binary tree is complete</b>
@@ -1348,6 +1350,7 @@ alex@/tmp/binary_trees$
 ```
 
 ### 22. Rotate left
+
 #### Files: [103-binary_tree_rotate_left.c](103-binary_tree_rotate_left.c) | [103-main.c](103-main.c)
 
 <b>Write a function that performs a left-rotation on a binary tree</b>
@@ -1408,9 +1411,10 @@ alex@/tmp/binary_trees$
 ```
     
 ### 23. Rotate right
+
 #### Files: [104-binary_tree_rotate_right.c](104-binary_tree_rotate_right.c) | [104-main.c](104-main.c)
 
-Write a function that performs a right-rotation on a binary tree
+<b>Write a function that performs a right-rotation on a binary tree</b>
 
 * Prototype: *`binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);`*
 * Where *`tree`* is a pointer to the root node of the tree to rotate
