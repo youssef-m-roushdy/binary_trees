@@ -1472,20 +1472,23 @@ alex@/tmp/binary_trees$
 ```
     
 ### 24. Is BST
+
 #### Files: [110-binary_tree_is_bst.c](110-binary_tree_is_bst.c) | [110-main.c](110-main.c)
 
 <b>Write a function that checks if a binary tree is a valid Binary Search Tree</b>
 
-Prototype: int binary_tree_is_bst(const binary_tree_t *tree);
-Where tree is a pointer to the root node of the tree to check
-Your function must return 1 if tree is a valid BST, and 0 otherwise
-If tree is NULL, return 0
-Properties of a Binary Search Tree:
+* Prototype: `int binary_tree_is_bst(const binary_tree_t *tree);`
+* Where `tree` is a pointer to the root node of the tree to check
+* Your function must return `1` if `tree` is a valid BST, and `0` otherwise
+* If `tree` is `NULL`, return `0`
 
-The left subtree of a node contains only nodes with values less than the node’s value
-The right subtree of a node contains only nodes with values greater than the node’s value
-The left and right subtree each must also be a binary search tree
-There must be no duplicate values
+<b>Properties of a Binary Search Tree:</b>
+
+```
+* The left subtree of a node contains only nodes with values less than the node’s value
+* The right subtree of a node contains only nodes with values greater than the node’s value
+* The left and right subtree each must also be a binary search tree
+* There must be no duplicate values
 alex@/tmp/binary_trees$ cat 110-main.c
 #include <stdlib.h>
 #include <stdio.h>
@@ -1532,25 +1535,23 @@ Is 12 bst: 1
 (010)     (054)     (097)     (402)
 Is 98 bst: 0
 alex@/tmp/binary_trees$
-Repo:
+```
 
-GitHub repository: binary_trees
-File: 110-binary_tree_is_bst.c
-    
-25. BST - Insert
-#### Files: []() | []()
-#advanced
-Score: 100.0% (Checks completed: 100.0%)
-Write a function that inserts a value in a Binary Search Tree
+### 25. BST - Insert
 
-Prototype: bst_t *bst_insert(bst_t **tree, int value);
-Where tree is a double pointer to the root node of the BST to insert the value
-And value is the value to store in the node to be inserted
-Your function must return a pointer to the created node, or NULL on failure
-If the address stored in tree is NULL, the created node must become the root node.
-If the value is already present in the tree, it must be ignored
-Your file 0-binary_tree_node.c will be compile during the correction
+#### Files: [111-bst_insert.c](111-bst_insert.c) | [0-binary_tree_node.c](0-binary_tree_node.c) | [111-main.c](111-main.c)
 
+<b>Write a function that inserts a value in a Binary Search Tree</b>
+
+* Prototype: bst_t `*bst_insert(bst_t **tree, int value);`
+* Where `tree` is a double pointer to the root node of the BST to insert the value
+* And value is the `value` to store in the node to be inserted
+* Your function must return a pointer to the created node, or `NULL` on failure
+* If the address stored in `tree` is `NULL`, the created node must become the root node.
+* If the value is already present in the tree, it must be ignored
+Your file `0-binary_tree_node.c` will be compile during the correction
+
+```
 alex@/tmp/binary_trees$ cat 111-main.c
 #include <stdlib.h>
 #include <stdio.h>
@@ -1604,24 +1605,22 @@ Node should be nil -> (nil)
 (001)     (046)     (128)--.       (512)
                          (256)
 alex@/tmp/binary_trees$
-Repo:
-
-GitHub repository: binary_trees
-File: 111-bst_insert.c, 0-binary_tree_node.c
+```
     
-26. BST - Array to BST
-#### Files: []() | []()
-#advanced
-Score: 100.0% (Checks completed: 100.0%)
-Write a function that builds a Binary Search Tree from an array
+### 26. BST - Array to BST
 
-Prototype: bst_t *array_to_bst(int *array, size_t size);
-Where array is a pointer to the first element of the array to be converted
-And size is the number of element in the array
-Your function must return a pointer to the root node of the created BST, or NULL on failure
-If a value of the array is already present in the tree, this value must be ignored
-Your files 111-bst_insert.c and 0-binary_tree_node.c will be compiled during the correction
+#### Files: [112-array_to_bst.c](112-array_to_bst.c) | [111-bst_insert.c](111-bst_insert.c) | [0-binary_tree_node.c](0-binary_tree_node.c) | [112-main.c](112-main.c)
 
+<b>Write a function that builds a Binary Search Tree from an array</b>
+
+* Prototype: `bst_t *array_to_bst(int *array, size_t size);`
+* Where `array` is a pointer to the first element of the array to be converted
+* And `size` is the number of element in the array
+* Your function must return a pointer to the root node of the created BST, or `NULL` on failure
+* If a value of the array is already present in the tree, this value must be ignored
+Your files `111-bst_insert.c` and `0-binary_tree_node.c` will be compiled during the correction
+
+```
 alex@/tmp/binary_trees$ cat 112-main.c 
 #include <stdlib.h>
 #include "binary_trees.h"
@@ -1654,21 +1653,23 @@ alex@/tmp/binary_trees$ ./112-bst_array
   .--(002)--.         .--(032)--.       (062)                           .--(098)
 (001)     (020)     (022)     (034)                                   (095)
 alex@/tmp/binary_trees$
-Repo:
+```
 
-GitHub repository: binary_trees
-File: 112-array_to_bst.c, 111-bst_insert.c, 0-binary_tree_node.c
+
     
-27. BST - Search
-#advanced
-Score: 100.0% (Checks completed: 100.0%)
-Write a function that searches for a value in a Binary Search Tree
+### 27. BST - Search
 
-Prototype: bst_t *bst_search(const bst_t *tree, int value);
-Where tree is a pointer to the root node of the BST to search
-And value is the value to search in the tree
-Your function must return a pointer to the node containing a value equals to value
-If tree is NULL or if nothing is found, your function must return NULL
+#### Files: [113-bst_search.c](113-bst_search.c) | [113-main.c](113-main.c)
+
+<b>Write a function that searches for a value in a Binary Search Tree</b>
+
+* Prototype: `bst_t *bst_search(const bst_t *tree, int value);`
+* Where `tree` is a pointer to the root node of the BST to search
+* And `value` is the value to search in the tree
+* Your function must return a pointer to the node containing a value equals to `value`
+* If `tree` is `NULL` or if nothing is found, your function must return `NULL`
+
+```
 alex@/tmp/binary_trees$ cat 113-main.c
 #include <stdlib.h>
 #include <stdio.h>
@@ -1712,23 +1713,22 @@ Found: 32
 (022)     (034)
 Node should be nil -> (nil)
 alex@/tmp/binary_trees$
-Repo:
+```
 
-GitHub repository: binary_trees
-File: 113-bst_search.c
-    
-28. BST - Remove
-#### Files: []() | []()
-#advanced
-Score: 100.0% (Checks completed: 100.0%)
-Write a function that removes a node from a Binary Search Tree
+### 28. BST - Remove
 
-Prototype: bst_t *bst_remove(bst_t *root, int value);
-Where root is a pointer to the root node of the tree where you will remove a node
-And value is the value to remove in the tree
-Once located, the node containing a value equals to value must be removed and freed
-If the node to be deleted has two children, it must be replaced with its first in-order successor (not predecessor)
-Your function must return a pointer to the new root node of the tree after removing the desired value
+#### Files: [114-bst_remove.c](114-bst_remove.c) | [114-main.c](114-main.c)
+
+<b>Write a function that removes a node from a Binary Search Tree</b>
+
+* Prototype: `bst_t *bst_remove(bst_t *root, int value);`
+* Where root is a pointer to the root node of the tree where you will remove a node
+* And `value` is the value to remove in the tree
+* Once located, the node containing a `value` equals to value must be removed and freed
+* If the node to be deleted has two children, it must be * replaced with its first `in-order successor` (not predecessor)
+* Your function must return a pointer to the new root node of the tree after removing the desired value
+
+```
 alex@/tmp/binary_trees$ cat 114-main.c
 #include <stdlib.h>
 #include <stdio.h>
@@ -1807,40 +1807,26 @@ Removed 68...
 ==14720== For counts of detected and suppressed errors, rerun with: -v
 ==14720== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 alex@/tmp/binary_trees$
-Repo:
+```
 
-GitHub repository: binary_trees
-File: 114-bst_remove.c
-    
-29. Big O #BST
-#### Files: []() | []()
-#advanced
-Score: 0.0% (Checks completed: 0.0%)
-What are the average time complexities of those operations on a Binary Search Tree (one answer per line):
+### 30. Is AVL
 
-Inserting the value n
-Removing the node with the value n
-Searching for a node in a BST of size n
-Repo:
+#### Files: [120-binary_tree_is_avl.c](120-binary_tree_is_avl.c) | [120-main.c](120-main.c)
 
-GitHub repository: binary_trees
-File: 115-O
-     
-30. Is AVL
-#### Files: []() | []()
-#advanced
-Score: 100.0% (Checks completed: 100.0%)
-Write a function that checks if a binary tree is a valid AVL Tree
+<b>Write a function that checks if a binary tree is a valid AVL Tree</b>
 
-Prototype: int binary_tree_is_avl(const binary_tree_t *tree);
-Where tree is a pointer to the root node of the tree to check
-Your function must return 1 if tree is a valid AVL Tree, and 0 otherwise
-If tree is NULL, return 0
-Properties of an AVL Tree:
+* Prototype: `int binary_tree_is_avl(const binary_tree_t *tree);`
+* Where `tree` is a pointer to the root node of the tree to check
+* Your function must return `1` if `tree` is a valid AVL Tree, and `0` otherwise
+* If `tree` is `NULL`, return `0`
 
-An AVL Tree is a BST
-The difference between heights of left and right subtrees cannot be more than one
-The left and right subtrees must also be AVL trees
+<b>Properties of an AVL Tree:</b>
+
+* An AVL Tree is a BST</b>
+* The difference between heights of left and right subtrees cannot be more than one
+* The left and right subtrees must also be AVL trees
+
+```
 alex@/tmp/binary_trees$ cat 120-main.c
 #include <stdlib.h>
 #include <stdio.h>
@@ -1922,25 +1908,24 @@ Is 98 avl: 0
                               (420)
 Is 98 avl: 0
 alex@/tmp/binary_trees$
-Repo:
-
-GitHub repository: binary_trees
-File: 120-binary_tree_is_avl.c
+```
     
-31. AVL - Insert
-#### Files: []() | []()
-#advanced
-Score: 100.0% (Checks completed: 100.0%)
-Write a function that inserts a value in an AVL Tree
+### 31. AVL - Insert
 
-Prototype: avl_t *avl_insert(avl_t **tree, int value);
-Where tree is a double pointer to the root node of the AVL tree for inserting the value
-And value is the value to store in the node to be inserted
-Your function must return a pointer to the created node, or NULL on failure
-If the address stored in tree is NULL, the created node must become the root node.
-The resulting tree after insertion, must be a balanced AVL Tree
-Your files 14-binary_tree_balance.c, 103-binary_tree_rotate_left.c, 104-binary_tree_rotate_right.c and 0-binary_tree_node.c will be compiled during the correction
+#### Files: [121-avl_insert.c](121-avl_insert.c) | [14-binary_tree_balance.c](14-binary_tree_balance.c) | [103-binary_tree_rotate_left.c](103-binary_tree_rotate_left.c) | [104-binary_tree_rotate_right.c](104-binary_tree_rotate_right.c) | [0-binary_tree_node.c](0-binary_tree_node.c) | [121-main.c](121-main.c)
 
+<b>Write a function that inserts a value in an AVL Tree</b>
+
+* Prototype: avl_t `*avl_insert(avl_t **tree, int value);`
+* Where `tree` is a double pointer to the root node of the AVL tree for inserting the value
+* And `value` is the value to store in the node to be inserted
+* Your function must return a pointer to the created node, or `NULL` on failure
+* If the address stored in `tree` is `NULL`, the created node must become the root node.
+* The resulting tree after insertion, must be a balanced AVL Tree
+
+Your files `14-binary_tree_balance.c`, `103-binary_tree_rotate_left.c`, `104-binary_tree_rotate_right.c` and `0-binary_tree_node.c` will be compiled during the correction
+
+```
 alex@/tmp/binary_trees$ cat 121-main.c
 #include <stdlib.h>
 #include <stdio.h>
@@ -2023,15 +2008,11 @@ Inserted: 50
 (012)     (050)     (128)     (402)--.
                                    (512)
 alex@/tmp/binary_trees$
-Repo:
-
-GitHub repository: binary_trees
-File: 121-avl_insert.c, 14-binary_tree_balance.c, 103-binary_tree_rotate_left.c, 104-binary_tree_rotate_right.c, 0-binary_tree_node.c
+```
     
-32. AVL - Array to AVL
-#advanced
-Score: 100.0% (Checks completed: 100.0%)
-Write a function that builds an AVL tree from an array
+### 32. AVL - Array to AVL
+
+<b>Write a function that builds an AVL tree from an array</b>
 
 Prototype: avl_t *array_to_avl(int *array, size_t size);
 Where array is a pointer to the first element of the array to be converted
