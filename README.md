@@ -2487,12 +2487,14 @@ alex@/tmp/binary_trees$
 
 <b>Write a function that extracts the root node of a Max Binary Heap</b>
 
-Prototype: int heap_extract(heap_t **root);
-Where root is a double pointer to the root node of heap
-Your function must return the value stored in the root node
-The root node must be freed and replace with the last level-order node of the heap
-Once replaced, the heap must be rebuilt if necessary
-If your function fails, return 0
+* Prototype: `int heap_extract(heap_t **root);`
+* Where `root` is a double pointer to the root node of heap
+* Your function must return the value stored in the root node
+* The root node must be freed and replace with the last `level-order` node of the heap
+* Once replaced, the heap must be rebuilt if necessary
+* If your function fails, return `0`
+
+```
 alex@/tmp/binary_trees$ cat 133-main.c
 #include <stdlib.h>
 #include <stdio.h>
@@ -2569,21 +2571,23 @@ Extracted: 91
 ==29133== For counts of detected and suppressed errors, rerun with: -v
 ==29133== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 alex@/tmp/binary_trees$
-
+```
     
 ### 40. Heap - Sort
 
-#### Files: []() | []()
+#### Files: [134-heap_to_sorted_array.c](134-heap_to_sorted_array.c) | [133-heap_extract.c](133-heap_extract.c) | [134-main.c](134-main.c)
 
-Write a function that converts a Binary Max Heap to a sorted array of integers
+<b>Write a function that converts a Binary Max Heap to a sorted array of integers</b>
 
-Prototype: int *heap_to_sorted_array(heap_t *heap, size_t *size);
-Where heap is a pointer to the root node of the heap to convert
-And size is an address to store the size of the array
-You can assume size is a valid address
-Since we are using Max Heap, the returned array must be sorted in descending order
-Your file 133-heap_extract.c will be compile during the correction
+* Prototype: `int *heap_to_sorted_array(heap_t *heap, size_t *size);`
+* Where `heap` is a pointer to the root node of the heap to convert
+* And `size` is an address to store the size of the array
+* You can assume `size` is a valid address
+* Since we are using Max Heap, the returned array must be sorted in descending order
 
+Your file `133-heap_extract.c` will be compile during the correction
+
+```
 alex@/tmp/binary_trees$ cat 134-main.c 
 #include <stdlib.h>
 #include <stdio.h>
@@ -2660,3 +2664,4 @@ alex@/tmp/binary_trees$ valgrind ./134-heap_sort
 ==46529== For counts of detected and suppressed errors, rerun with: -v
 ==46529== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 alex@/tmp/binary_trees$
+```
