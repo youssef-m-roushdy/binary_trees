@@ -2012,15 +2012,19 @@ alex@/tmp/binary_trees$
     
 ### 32. AVL - Array to AVL
 
+#### Files: [122-array_to_avl.c](122-array_to_avl.c) | [121-avl_insert.c](121-avl_insert.c) | [0-binary_tree_node.c](0-binary_tree_node.c) | [103-binary_tree_rotate_left.c](103-binary_tree_rotate_left.c) | [104-binary_tree_rotate_right.c](104-binary_tree_rotate_right.c) | [14-binary_tree_balance.c](14-binary_tree_balance.c) | [122-main.c](122-main.c)
+
 <b>Write a function that builds an AVL tree from an array</b>
 
-Prototype: avl_t *array_to_avl(int *array, size_t size);
-Where array is a pointer to the first element of the array to be converted
-And size is the number of element in the array
-Your function must return a pointer to the root node of the created AVL tree, or NULL on failure
-If a value of the array is already present in the tree, this value must be ignored
-Your files 121-avl_insert.c, 0-binary_tree_node.c, 14-binary_tree_balance.c, 103-binary_tree_rotate_left.c and 104-binary_tree_rotate_right.c will be compiled during the correction
+* Prototype: `avl_t *array_to_avl(int *array, size_t size);`
+* Where `array` is a pointer to the first element of the array to be converted
+* And `size` is the number of element in the array
+* Your function must return a pointer to the root node of the created AVL tree, or `NULL` on failure
+* If a value of the array is already present in the tree, this value must be ignored
 
+Your files `121-avl_insert.c`, `0-binary_tree_node.c`, `14-binary_tree_balance.c`, `103-binary_tree_rotate_left.c` and `104-binary_tree_rotate_right.c` will be compiled during the correction
+
+```
 alex@/tmp/binary_trees$ cat 122-main.c 
 #include <stdlib.h>
 #include "binary_trees.h"
@@ -2053,25 +2057,25 @@ alex@/tmp/binary_trees$ ./122-avl_array
 (001)     (020)     (022)     (034)     (062)     (079)     (087)       .--(098)
                                                                       (095)
 alex@/tmp/binary_trees$
-Repo:
+```
 
-GitHub repository: binary_trees
-File: 122-array_to_avl.c, 121-avl_insert.c, 0-binary_tree_node.c, 103-binary_tree_rotate_left.c, 104-binary_tree_rotate_right.c, 14-binary_tree_balance.c
-    
-33. AVL - Remove
-#advanced
-Score: 100.0% (Checks completed: 100.0%)
-Write a function that removes a node from an AVL tree
+### 33. AVL - Remove
 
-Prototype: avl_t *avl_remove(avl_t *root, int value);
-Where root is a pointer to the root node of the tree for removing a node
-And value is the value to remove in the tree
-Once located, the node containing a value equals to value must be removed and freed
-If the node to be deleted has two children, it must be replaced with its first in-order successor (not predecessor)
-After deletion of the desired node, the tree must be rebalanced if necessary
-Your function must return a pointer to the new root node of the tree after removing the desired value, and after rebalancing
-Your files 14-binary_tree_balance.c, 103-binary_tree_rotate_left.c and 104-binary_tree_rotate_right.c will be compiled during the correction
+#### Files: [123-avl_remove.c](123-avl_remove.c) | [14-binary_tree_balance.c](14-binary_tree_balance.c) | [103-binary_tree_rotate_left.c](103-binary_tree_rotate_left.c) | [104-binary_tree_rotate_right.c](104-binary_tree_rotate_right.c) | [123-main.c](123-main.c)
 
+<b>Write a function that removes a node from an AVL tree</b>
+
+* Prototype: `avl_t *avl_remove(avl_t *root, int value);`
+* Where `root` is a pointer to the root node of the tree for removing a node
+* And `value` is the value to remove in the tree
+* Once located, the node containing a value equals to `value` must be removed and freed
+* If the node to be deleted has two children, it must be replaced with its first `in-order successor` (not predecessor)
+* After deletion of the desired node, the tree must be rebalanced if necessary
+* Your function must return a pointer to the new root node of the tree after removing the desired value, and after rebalancing
+
+Your files `14-binary_tree_balance.c`, `103-binary_tree_rotate_left.c` and `104-binary_tree_rotate_right.c` will be compiled during the correction
+
+```
 alex@/tmp/binary_trees$ cat 123-main.c
 #include <stdio.h>
 #include <stdlib.h>
@@ -2166,25 +2170,25 @@ Removed 22...
 ==15646== For counts of detected and suppressed errors, rerun with: -v
 ==15646== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 alex@/tmp/binary_trees$
-Repo:
+```
 
-GitHub repository: binary_trees
-File: 123-avl_remove.c, 14-binary_tree_balance.c, 103-binary_tree_rotate_left.c, 104-binary_tree_rotate_right.c
-    
-34. AVL - From sorted array
-#advanced
-Score: 100.0% (Checks completed: 100.0%)
-Write a function that builds an AVL tree from an array
+### 34. AVL - From sorted array
 
-Prototype: avl_t *sorted_array_to_avl(int *array, size_t size);
-Where array is a pointer to the first element of the array to be converted
-And size is the number of element in the array
-Your function must return a pointer to the root node of the created AVL tree, or NULL on failure
-You can assume there will be no duplicate value in the array
-You are not allowed to rotate
-You can only have 2 functions in your file
-Your file 0-binary_tree_node.c will be compiled during the correction
+#### Files: [124-sorted_array_to_avl.c](124-sorted_array_to_avl.c) | [0-binary_tree_node.c](0-binary_tree_node.c) | [124-main.c](124-main.c)
 
+<b>Write a function that builds an AVL tree from an array</b>
+
+* Prototype: `avl_t *sorted_array_to_avl(int *array, size_t size);`
+* Where `array` is a pointer to the first element of the array to be converted
+* And `size` is the number of element in the array
+* Your function must return a pointer to the root node of the created AVL tree, or `NULL` on failure
+* You can assume there will be no duplicate value in the array
+* You are not allowed to rotate
+* You can only have 2 functions in your file
+
+Your file `0-binary_tree_node.c` will be compiled during the correction
+
+```
 alex@/tmp/binary_trees$ cat 124-main.c
 #include <stdlib.h>
 #include <stdio.h>
@@ -2235,38 +2239,26 @@ alex@/tmp/binary_trees$ ./124-avl_sorted
 (001)     (020)     (022)     (034)     (062)     (079)     (087)     (095)--.
                                                                            (098)
 alex@/tmp/binary_trees$
-Repo:
+```
 
-GitHub repository: binary_trees
-File: 124-sorted_array_to_avl.c, 0-binary_tree_node.c
-    
-35. Big O #AVL Tree
-#advanced
-Score: 0.0% (Checks completed: 0.0%)
-What are the average time complexities of those operations on an AVL Tree (one answer per line):
+### 36. Is Binary heap
 
-Inserting the value n
-Removing the node with the value n
-Searching for a node in an AVL tree of size n
-Repo:
+#### Files: [130-binary_tree_is_heap.c](130-binary_tree_is_heap.c) | [130-main.c](130-main.c)
 
-GitHub repository: binary_trees
-File: 125-O
-     
-36. Is Binary heap
-#advanced
-Score: 100.0% (Checks completed: 100.0%)
-Write a function that checks if a binary tree is a valid Max Binary Heap
+<b>Write a function that checks if a binary tree is a valid [Max Binary Heap](https://en.wikipedia.org/wiki/Binary_heap)</b>
 
-Prototype: int binary_tree_is_heap(const binary_tree_t *tree);
-Where tree is a pointer to the root node of the tree to check
-Your function must return 1 if tree is a valid Max Binary Heap, and 0 otherwise
-If tree is NULL, return 0
-Properties of a Max Binary Heap:
+* Prototype: `int binary_tree_is_heap(const binary_tree_t *tree);`
+* Where `tree` is a pointer to the root node of the tree to check
+* Your function must return `1` if `tree` is a valid Max Binary Heap, and `0` otherwise
+* If `tree` is `NULL`, return `0`
 
-It’s a complete tree
-In a Max Binary Heap, the value at root must be maximum among all values present in Binary Heap
-The last property must be recursively true for all nodes in Binary Tree
+<b>Properties of a Max Binary Heap:</b>
+
+* It’s a complete tree
+* In a Max Binary Heap, the value at root must be maximum among all values present in Binary Heap
+* The last property must be recursively true for all nodes in Binary Tree
+
+```
 alex@/tmp/binary_trees$ cat 130-main.c
 #include <stdlib.h>
 #include <stdio.h>
@@ -2339,10 +2331,12 @@ Repo:
 
 GitHub repository: binary_trees
 File: 130-binary_tree_is_heap.c
-    
-37. Heap - Insert
-#advanced
-Score: 100.0% (Checks completed: 100.0%)
+```
+
+### 37. Heap - Insert
+
+#### Files: []() | []()
+
 Write a function that inserts a value in Max Binary Heap
 
 Prototype: heap_t *heap_insert(heap_t **root, int value)
@@ -2435,14 +2429,12 @@ Inserted: 50
   .--(050)     (098)     (012)     (256)
 (046)
 alex@/tmp/binary_trees$
-Repo:
 
-GitHub repository: binary_trees
-File: 131-heap_insert.c, 0-binary_tree_node.c
     
-38. Heap - Array to Binary Heap
-#advanced
-Score: 100.0% (Checks completed: 100.0%)
+### 38. Heap - Array to Binary Heap
+
+#### Files: []() | []()
+
 Write a function that builds a Max Binary Heap tree from an array
 
 Prototype: heap_t *array_to_heap(int *array, size_t size);
@@ -2483,14 +2475,12 @@ alex@/tmp/binary_trees$ ./132-heap_array
   .--(047)     (034)     (002)     (020)     (022)     (068)     (001)     (021)
 (032)
 alex@/tmp/binary_trees$
-Repo:
 
-GitHub repository: binary_trees
-File: 132-array_to_heap.c, 131-heap_insert.c, 0-binary_tree_node.c
     
-39. Heap - Extract
-#advanced
-Score: 100.0% (Checks completed: 100.0%)
+### 39. Heap - Extract
+
+#### Files: []() | []()
+
 Write a function that extracts the root node of a Max Binary Heap
 
 Prototype: int heap_extract(heap_t **root);
@@ -2575,14 +2565,12 @@ Extracted: 91
 ==29133== For counts of detected and suppressed errors, rerun with: -v
 ==29133== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 alex@/tmp/binary_trees$
-Repo:
 
-GitHub repository: binary_trees
-File: 133-heap_extract.c
     
-40. Heap - Sort
-#advanced
-Score: 100.0% (Checks completed: 100.0%)
+### 40. Heap - Sort
+
+#### Files: []() | []()
+
 Write a function that converts a Binary Max Heap to a sorted array of integers
 
 Prototype: int *heap_to_sorted_array(heap_t *heap, size_t *size);
